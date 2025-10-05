@@ -43,3 +43,4 @@ This Agreement constitutes the entire agreement between the parties and supersed
 For any questions or support, please contact us at Author: Nelsomar Barros ;
 Github: https://github.com/SecureLogic7/Secure7NetGuard ;
 Contact: nelsom.one8@gmail.com
+Buymeacoffee: https://buymeacoffee.com/nelsom
