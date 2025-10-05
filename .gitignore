@@ -23,3 +23,6 @@ __pycache__/
 # Logs e Temporários
 *.log
 temporarios/
+pyarmor_runtime_000000/
+src_original/
+
