@@ -1,0 +1,10 @@
+from src.offline_updates import OfflineUpdates
+
+class TestOfflineUpdates:
+    def test_offline_updates_initialization(self):
+        updates = OfflineUpdates()
+        assert updates is not None
+
+    def test_offline_updates_functionality(self):
+        updates = OfflineUpdates()
+        assert updates.functionality() == "expected_result"

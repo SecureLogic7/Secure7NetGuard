@@ -1,0 +1,6 @@
+app
+data_encryption
+gui
+lock_screen
+network_monitoring
+offline_updates

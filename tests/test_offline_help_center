@@ -1,0 +1,23 @@
+import unittest
+import sys
+sys.path.append('../src')
+from src.offline_help_center import OfflineHelpCenter
+
+class TestOfflineHelpCenter(unittest.TestCase):
+
+    def setUp(self):
+        self.offline_help_center = OfflineHelpCenter()
+
+    def test_get_help_content(self):
+        # Test if the function returns a string
+        result = self.offline_help_center.get_help_content()
+        self.assertIsInstance(result, str)
+
+    def test_search_help_content(self):
+        # Test if the function returns a list
+        result = self.offline_help_center.search_help_content("test")
+        self.assertIsInstance(result, list)
+
+if __name__ == '__main__':
+    unittest.main()
+
