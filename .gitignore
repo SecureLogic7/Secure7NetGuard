@@ -1,28 +1,5 @@
-# Project name: Secure7NetGuard_1.01_Offline ;
-# Author: Nelsomar Barros ;
-# Github: https://github.com/SecureLogic7/Secure7NetGuard ;
-# Contact: nelsom.one8@gmail.com .
-
-# Arquivos Sensíveis / Configurações Locais
-.env
-*.sqlite
-
-# Ambientes Virtuais
-venv/
-env/
-
-# Artefatos de Build e Cache
-build/
-dist/
-__pycache__/
-*.pyc
-*.o
-*.so
-.pytest_cache/
-
+// ... existing code ...
 # Logs e Temporários
 *.log
 temporarios/
-pyarmor_runtime_000000/
 src_original/
-
