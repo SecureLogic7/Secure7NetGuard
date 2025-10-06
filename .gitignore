@@ -1,5 +1,13 @@
-// ... existing code ...
 # Logs e Temporários
 *.log
 temporarios/
 src_original/
+build/
+__pycache__/
+.env
+venv/
+
+# Node/JavaScript Artifacts (for Electron cleanup)
+node_modules/
+package-lock.json
+node_modules/electron
