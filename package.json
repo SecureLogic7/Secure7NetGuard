@@ -6,7 +6,7 @@
   "homepage": "https://github.com/SecureLogic7/Secure7NetGuard",
   "author": {
     "name": "Nelsomar Barros",
-    "email": "nelsom.one8@gmail.com"
+    "email": "Secure7NetGuard@proton.me"
   },
   "scripts": {
     "start": "node index.js",

@@ -3,7 +3,7 @@
 # Project name: Secure7NetGuard_1.01_Offline
 # Author: Nelsomar Barros
 # Github: https://github.com/SecureLogic7/Secure7NetGuard
-# Contact: nelsom.one8@gmail.com
+# Contact: Secure7NetGuard@proton.me
 
 a = Analysis(
     ['run.py'],  # Changed from 'src/app.py' to 'run.py'

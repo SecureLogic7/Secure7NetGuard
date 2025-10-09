@@ -1,7 +1,7 @@
 # Project name: Secure7NetGuard_1.01_Offline
 # Author: Nelsomar Barros
 # Github: https://github.com/SecureLogic7/Secure7NetGuard
-# Contact: nelsom.one8@gmail.com
+# Contact: Secure7NetGuard@proton.me
 
 from flask import Flask, render_template, redirect, url_for, flash, request, jsonify, session
 from flask_sqlalchemy import SQLAlchemy

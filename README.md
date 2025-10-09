@@ -3,7 +3,7 @@
 # Project name: Secure7NetGuard_1.01_Offline
 # Author: Nelsomar Barros
 # Github: https://github.com/SecureLogic7/Secure7NetGuard
-# Contact: nelsom.one8@gmail.com
+# Contact: Secure7NetGuard@proton.me
 Secure7NetGuard is a comprehensive network monitoring and site blocking tool designed to enhance your online security and productivity **in offline environments**. This version is optimized for operation without active internet connections.
 
 ## Features

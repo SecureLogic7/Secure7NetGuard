@@ -1,6 +1,6 @@
 # Author: Nelsomar Barros
 # Github: https://github.com/SecureLogic7/Secure7NetGuard
-# Contact: nelsom.one8@gmail.com
+# Contact: Secure7NetGuard@proton.me
 
  for Secure7NetGuard Offline Version 1.01
 
