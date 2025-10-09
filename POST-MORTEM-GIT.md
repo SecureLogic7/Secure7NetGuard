@@ -118,3 +118,56 @@ git remote set-url origin git@github.com:SecureLogic7/Secure7NetGuard.git
 - **Verificação de Arquivos Temporários**: Não foram encontrados arquivos temporários no repositório.
 - **Verificação de Arquivos YAML/YML**: Não foram encontrados arquivos YAML ou YML no repositório.
 - **Verificação de Arquivos de Configuração de API**: O arquivo `src/api_config.py` contém uma configuração de obfuscação de código usando Pyarmor, indicando que o código foi obfuscado para proteger a lógica de negócios.
+
+// ... existing code ...
+
+    **Ação de Configuração de LFS (Recomendada):**
+    Para desabilitar mensagens de alerta sobre o suporte a bloqueio LFS, o comando a seguir foi recomendado (a ser executado no terminal local):
+    ```bash
+    git config lfs.https://gitlab.com/securelogic71/Secure7NetGuard.git/info/lfs.locksverify true
+    ```
+
+## 6. Incidente de Rejeição de Push e Resolução de Conflito (09 de Outubro de 2025)
+
+### 6.1. Problema (Sintoma)
+
+Após a substituição do e-mail de contato em 31 arquivos e a criação de um novo commit local, a tentativa de `git push origin main` foi rejeitada pelo GitHub.
+
+**Mensagem de Erro:**
+```
+! [rejected] main -> main (fetch first)
+error: failed to push some refs to 'github.com:SecureLogic7/Secure7NetGuard.git'
+hint: Updates were rejected because the remote contains work that you do not have locally.
+```
+
+### 6.2. Análise da Causa Raiz
+
+A rejeição ocorreu porque o repositório remoto (`origin/main`) havia sido atualizado por outro processo, contendo commits que não existiam no branch local (`main`). A regra de 'fast-forward' foi violada.
+
+### 6.3. Solução Aplicada (Pull, Merge e Push)
+
+O problema foi resolvido integrando as alterações remotas com o commit local e resolvendo o conflito gerado.
+
+1.  **Tentativa de Rebase (Falha):** Uma tentativa de `git pull --rebase` falhou porque o ambiente do agente não manteve o estado de mudança de diretório, e comandos subsequentes como `git rebase --continue` falharam ao tentar abrir um editor.
+2.  **Estratégia de Merge:** A estratégia foi alterada para `git fetch` e `git merge origin/main`.
+3.  **Conflito no README.md:** Durante o merge, um conflito foi detectado no arquivo `README.md`, pois o commit local continha a atualização do e-mail, e o commit remoto tinha uma versão diferente da linha de contato.
+    - **Conflito:** O bloco de conflito no `README.md` foi inspecionado e resolvido manualmente para manter o novo e-mail: `# Contact: Secure7NetGuard@proton.me`.
+4.  **Finalização:** O conflito foi marcado como resolvido (`git add README.md`), e o merge foi finalizado com um commit.
+5.  **Push Final:** O push foi executado com sucesso para os dois remotes.
+
+**Comandos Chave da Solução:**
+```bash
+git fetch origin
+git merge origin/main
+# Correção manual do README.md
+git add README.md
+git commit -m "Merge branch 'main' of github.com:SecureLogic7/Secure7NetGuard and update contact email"
+git push origin main
+git push gitlab main
+```
+
+## Verificação de Segurança - 09 de Outubro de 2025
+
+- **Verificação de Arquivos Temporários**: Não foram encontrados arquivos temporários no repositório.
+- **Verificação de Arquivos YAML/YML**: Não foram encontrados arquivos YAML ou YML no repositório.
+- **Verificação de Arquivos de Configuração de API**: O arquivo `src/api_config.py` contém uma configuração de obfuscação de código usando Pyarmor, indicando que o código foi obfuscado para proteger a lógica de negócios.
